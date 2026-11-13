@@ -1,0 +1,40 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <label for="nombre">Tu nombre: </label>
+  <input id="nombre" type="text" formControlName="nombre" />
+  <label for="apellidos">Tus apellidos: </label>
+  <input id="apellidos" type="text" formControlName="apellidos" />
+  <label for="telefono">Tu numero de telefono: </label>
+  <input id="telefono" type="tel" formControlName="telefono" />
+  <label for="email">Tu Email: </label>
+  <input id="email" type="email" formControlName="email" />
+  <label for="mascota">El nombre de tu mascota: </label>
+  <input id="mascota" type="text" formControlName="mascota" />
+  <label for="especie">la especie de tu mascota: </label>
+  <select id="especie" formControlName="especie">
+    <option>Perro</option>
+    <option>Gato</option>
+    <option>Ave</option>
+    <option>Otro</option>
+  </select>  
+
+  <label for="sexo">sexo de tu mascota: </label>
+  <input id="sexo" type="radio" formControlName="sexo"/>
+  <br>
+  <label for="raza">La raza de tu mascota (opcional): </label>
+  <input id="raza" type="text" formControlName="raza" />
+  <label for="edad">Edad de tu mascota: </label>
+  <input id="edad" type="number" formControlName="edad" />
+  <label for="peso">peso de tu mascota: </label>
+  <input id="peso" type="number" formControlName="peso" />
+  <label for="microchip">numero de microchip de tu mascota: </label>
+  <input id="microchip" type="text" formControlName="microchip" />
+  <label for="contrasena">Tu contraseña: </label>
+  <input id="contrasena" type="password" formControlName="contrasena" />
+  <label for="motivo">motivo de visita: </label>
+  <textarea id="motivo" formControlName="motivo"></textarea>
+  <label for="privacidad">motivo de visita: </label>
+  <input id="privacidad" type="checkbox" formControlName="privacidad" />
+  
+  <button type="submit" [disabled]="!formulario.valid">Submit</button>
+</form>
+
